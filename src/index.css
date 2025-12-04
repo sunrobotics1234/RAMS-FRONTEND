@@ -1,0 +1,277 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* The Enchanted Eatery - Magical Design System */
+
+@layer base {
+  :root {
+    --background: 220 25% 5%;
+    --foreground: 220 15% 95%;
+
+    --card: 220 20% 8%;
+    --card-foreground: 220 15% 95%;
+
+    --popover: 220 20% 8%;
+    --popover-foreground: 220 15% 95%;
+
+    --primary: 200 15% 85%;
+    --primary-foreground: 220 25% 10%;
+    --primary-glow: 200 20% 90%;
+
+    --secondary: 210 15% 80%;
+    --secondary-foreground: 220 25% 10%;
+
+    --muted: 220 20% 12%;
+    --muted-foreground: 220 10% 60%;
+
+    --accent: 210 15% 75%;
+    --accent-foreground: 220 25% 10%;
+
+    --destructive: 0 60% 50%;
+    --destructive-foreground: 220 15% 95%;
+
+    --border: 220 15% 15%;
+    --input: 220 20% 12%;
+    --ring: 200 15% 85%;
+
+    --radius: 2rem;
+
+    /* Subtle Dark Gradients */
+    --gradient-nebula: linear-gradient(135deg, hsl(220 25% 5%), hsl(230 20% 7%), hsl(220 25% 5%));
+    --gradient-aurora: linear-gradient(135deg, hsl(210 15% 80% / 0.05), hsl(200 15% 85% / 0.05));
+    --gradient-primary: linear-gradient(135deg, hsl(200 15% 85%), hsl(200 20% 90%));
+    --gradient-secondary: linear-gradient(135deg, hsl(210 15% 80%), hsl(205 18% 85%));
+    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+    --gradient-hero: radial-gradient(ellipse at top, hsl(210 15% 80% / 0.03), transparent 50%), radial-gradient(ellipse at bottom, hsl(200 15% 85% / 0.03), transparent 50%);
+
+    /* Subtle Glows & Shadows */
+    --glow-primary: 0 0 20px hsl(200 15% 85% / 0.1), 0 0 40px hsl(200 15% 85% / 0.05);
+    --glow-secondary: 0 0 20px hsl(210 15% 80% / 0.1), 0 0 40px hsl(210 15% 80% / 0.05);
+    --glow-spell: 0 0 15px hsl(210 15% 80% / 0.1), 0 0 30px hsl(200 15% 85% / 0.08);
+    --shadow-enchanted: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    --shadow-glass: 0 8px 32px rgba(255, 255, 255, 0.03);
+
+    /* Magical Animations */
+    --transition-smooth: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-float: all 0.8s ease-in-out;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 30% 4%;
+    --foreground: 220 15% 95%;
+
+    --card: 220 25% 7%;
+    --card-foreground: 220 15% 95%;
+
+    --popover: 220 25% 7%;
+    --popover-foreground: 220 15% 95%;
+
+    --primary: 200 18% 88%;
+    --primary-foreground: 220 30% 8%;
+    --primary-glow: 200 22% 92%;
+
+    --secondary: 210 18% 85%;
+    --secondary-foreground: 220 30% 8%;
+
+    --muted: 220 25% 10%;
+    --muted-foreground: 220 12% 65%;
+
+    --accent: 210 18% 78%;
+    --accent-foreground: 220 30% 8%;
+
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 220 15% 95%;
+
+    --border: 220 20% 12%;
+    --input: 220 25% 10%;
+    --ring: 200 18% 88%;
+
+    /* Subtle Dark Gradients */
+    --gradient-nebula: linear-gradient(135deg, hsl(220 30% 4%), hsl(230 25% 6%), hsl(220 30% 4%));
+    --gradient-aurora: linear-gradient(135deg, hsl(210 18% 85% / 0.04), hsl(200 18% 88% / 0.04));
+    --gradient-primary: linear-gradient(135deg, hsl(200 18% 88%), hsl(200 22% 92%));
+    --gradient-secondary: linear-gradient(135deg, hsl(210 18% 85%), hsl(205 20% 88%));
+    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    --gradient-hero: radial-gradient(ellipse at top, hsl(210 18% 85% / 0.02), transparent 50%), radial-gradient(ellipse at bottom, hsl(200 18% 88% / 0.02), transparent 50%);
+
+    --glow-primary: 0 0 20px hsl(200 18% 88% / 0.08), 0 0 40px hsl(200 18% 88% / 0.04);
+    --glow-secondary: 0 0 20px hsl(210 18% 85% / 0.08), 0 0 40px hsl(210 18% 85% / 0.04);
+    --glow-spell: 0 0 15px hsl(210 18% 85% / 0.08), 0 0 30px hsl(200 18% 88% / 0.06);
+    --shadow-enchanted: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+    --shadow-glass: 0 8px 32px rgba(255, 255, 255, 0.02);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  /* Enchanted Button Variants */
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary to-primary-glow text-primary-foreground;
+    @apply rounded-3xl px-10 py-5 font-bold tracking-wide text-lg;
+    @apply transform transition-all duration-500 ease-out;
+    @apply hover:scale-110 hover:shadow-2xl active:scale-95;
+    box-shadow: var(--glow-primary);
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+
+  .btn-secondary {
+    @apply bg-gradient-to-r from-secondary via-accent to-secondary text-secondary-foreground;
+    @apply rounded-3xl px-10 py-5 font-bold tracking-wide text-lg;
+    @apply transform transition-all duration-500 ease-out;
+    @apply hover:scale-110 hover:shadow-2xl active:scale-95;
+    box-shadow: var(--glow-secondary);
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  .btn-glass {
+    @apply backdrop-blur-md border-2 border-white/30;
+    background: var(--gradient-glass);
+    @apply rounded-3xl px-10 py-5 font-bold tracking-wide text-lg;
+    @apply transform transition-all duration-500 ease-out;
+    @apply hover:scale-110 hover:bg-white/20 active:scale-95;
+    box-shadow: var(--shadow-glass);
+  }
+
+  /* Spell Card Styles */
+  .spell-card {
+    @apply backdrop-blur-md border-2 border-white/20 rounded-3xl p-8;
+    background: var(--gradient-glass);
+    box-shadow: var(--shadow-glass);
+    @apply transform transition-all duration-500 ease-out;
+    @apply hover:scale-105 hover:-translate-y-2;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .spell-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: var(--gradient-aurora);
+    opacity: 0;
+    transition: var(--transition-smooth);
+    pointer-events: none;
+  }
+
+  .spell-card:hover::before {
+    opacity: 1;
+    animation: aurora-rotate 4s linear infinite;
+  }
+
+  .card-premium {
+    @apply bg-card/80 backdrop-blur-lg border-2 border-border/50 rounded-3xl p-8;
+    box-shadow: var(--shadow-enchanted);
+    @apply transform transition-all duration-500 ease-out;
+    @apply hover:scale-105 hover:-translate-y-3;
+    position: relative;
+  }
+
+  .card-premium:hover {
+    box-shadow: var(--glow-spell);
+  }
+
+  /* Text Gradients */
+  .text-gradient-primary {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-secondary {
+    background: var(--gradient-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Magical Animations */
+  .float-animation {
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+
+  .shimmer {
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    25% { transform: translateY(-15px) rotate(2deg); }
+    75% { transform: translateY(-15px) rotate(-2deg); }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { 
+      box-shadow: var(--glow-primary); 
+      filter: brightness(1);
+    }
+    50% { 
+      box-shadow: var(--glow-primary), var(--glow-secondary); 
+      filter: brightness(1.2);
+    }
+  }
+
+  @keyframes shimmer {
+    0%, 100% { 
+      box-shadow: var(--glow-secondary);
+      filter: hue-rotate(0deg);
+    }
+    50% { 
+      box-shadow: var(--glow-secondary), var(--glow-primary);
+      filter: hue-rotate(15deg);
+    }
+  }
+
+  @keyframes aurora-rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @keyframes nebula-drift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+}
